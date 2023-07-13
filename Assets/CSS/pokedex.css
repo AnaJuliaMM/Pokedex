@@ -49,7 +49,7 @@ li.pokemon span.number{
 }
 
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 393px) {
     ol.pokemons{
         grid-template-columns: 1fr 1fr;
     }
