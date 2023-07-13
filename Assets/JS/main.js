@@ -1,9 +1,5 @@
-const offset = 0;
-const limit = 10;
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
-
-//Transformar em elemento HTML
-function convertHtmlListElement(pokemon){
+//Transformar no elemento li de HTML
+function convertToHtmlLi(pokemon){
     return `<li class="pokemon">
         <span class="number">#001</span>
         <span class="name">${pokemon.name}</span>
@@ -17,31 +13,15 @@ function convertHtmlListElement(pokemon){
         </li>`
 }
 
+const pokemonList = document.getElementById('pokemonList')
 
-function addPokedexHtmlPage(pokemon){
-    const pokemonList = document.getElementById('pokemonList')
-    pokemonList.innerHTML += convertHtmlListElement(pokemon)
+async function manipulateHtml(){
+    const pokemons = await pokeApi.getPokemons();     //pokeAPI é um objeto que vem do script 'poke-api.js'
+
+    pokemonList.innerHTML = pokemons.map(convertToHtmlLi).join('')
 }
-
-//Requisição http (É uma Promise)
-async function makeHttpRequest(){
-    try{
-        const response =  await fetch(url)
-        const responseBody = await response.json()
-        const pokemonList = responseBody.results //É um atributo do JSON que possuí a lista dos pokemóns
-        pokemonList.forEach(pokemon => {
-            addPokedexHtmlPage(pokemon);
-        });
-
-    }catch(error){
-        console.log(error);
-    }finally{
-        console.log('Requisição Concluída');
-    }
-}
-makeHttpRequest()
+manipulateHtml()
 
 
 
 
-//Manipulação do HTML
