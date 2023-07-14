@@ -3,7 +3,7 @@ const pokeApi = {}
 function createPokemonCustomDescription(pokeApiDetails){
     const pokemon = new Pokemon();
     pokemon.name = pokeApiDetails.name;
-    pokemon.number = pokeApiDetails.order;
+    pokemon.number = pokeApiDetails.id;
     pokemon.image = pokeApiDetails.sprites.other.dream_world.front_default;
 
 
@@ -18,9 +18,10 @@ function createPokemonCustomDescription(pokeApiDetails){
 
 
 pokeApi.getPokemonDetail = async (pokemon)=>{
-    const pokemonUrl = await fetch(pokemon.url)
-    const pokemonUrlJson = await pokemonUrl.json();
-    return createPokemonCustomDescription(pokemonUrlJson)
+    const pokemonDetails = await fetch(pokemon.url)
+    const pokemonDetailsJson = await pokemonDetails.json();
+    console.log(pokemonDetailsJson)
+    return createPokemonCustomDescription(pokemonDetailsJson)
 
 }
 
@@ -35,7 +36,6 @@ pokeApi.getPokemons = async (offset = 0, limit = 5)=>{
         const pokemonUrls = await pokemonList.map(pokeApi.getPokemonDetail)
         console.log(pokemonUrls);
         const pokemonDetail = await Promise.all(pokemonUrls);
-        console.log(pokemonDetail);
          
         return pokemonDetail;
      
