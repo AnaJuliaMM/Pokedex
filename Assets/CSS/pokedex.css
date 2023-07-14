@@ -1,3 +1,58 @@
+
+.normal {
+    background-color: #A6A877;
+}
+.fire {
+    background-color: #EE7F30;
+}
+.water {
+    background-color: #6590EE;
+} 
+.grass {
+    background-color: #80de55;
+} 
+.electric {
+    background-color: #F7D02D;
+}
+.ice  {
+    background-color: #98D5D6;
+}
+.ground {
+   background-color: #DFBF68;
+}
+.flying {
+    background-color: #A990EE;
+}
+.poison {
+    background-color: #A03FA0;
+}
+.fighting {
+    background-color: #BF3028;
+}
+.psychic {
+    background-color: #F85687;
+}
+.dark {
+    background-color: #725847;
+}
+.rock {
+    background-color: #B89F44;
+}
+.bug {
+    background-color: #A8B720;
+}
+.ghost{
+    background-color: #6E5896; 
+}
+.steel {
+    background-color: #B9B7CF;
+}
+.dragon{
+    background-color: #6E39F3;
+}
+.fairy {
+    background-color: #FEAEC7;
+}
 ol.pokemons{
     display: grid;
     grid-template-columns: 1fr;
@@ -11,13 +66,30 @@ li.pokemon{
     margin: .5rem;
     padding: 1.5rem 1rem;     /*Padding: cima  baixo*/
     border-radius: 1rem;
-    background-color: #49D0B0;
     color: #ffffff;
 }
 li.pokemon div.detail img{
     max-width: 140px;
     height: 70px;
     align-self: self-end; 
+}
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    width: 100%;
+}
+.pagination button{
+    padding: .25rem .5rem ;
+    margin: .25rem 0;
+    border-radius: 0.7rem; 
+    font-size: .75rem;
+    background-color: #6C79DB;
+    border: none;
+    color: #ffffff;
+   
 }
 li.pokemon div.detail{
     display: flex;
@@ -31,16 +103,18 @@ li.pokemon ol.types{
     list-style: none;
 }
 li.pokemon ol.types li.type{
-    background-color: #62E1C9;
     color: #ffffff;
     padding: .25rem .5rem ;
     margin: .25rem 0;
     font-size: .75rem;
-    border-radius: 1rem;  
+    border-radius: 1rem; 
+    filter: brightness(1.09);
+    text-align: center;
 }
 li.pokemon span.name{
     color:#ffffff;
     margin-bottom: .25rem;
+    text-transform: capitalize ;
 }
 li.pokemon span.number{
     color: black;

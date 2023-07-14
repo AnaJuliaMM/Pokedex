@@ -8,8 +8,8 @@ function createPokemonCustomDescription(pokeApiDetails){
 
 
     const types = pokeApiDetails.types.map((typeSlot)=> typeSlot.type.name);
-    const {type} = types //destructing, equivalente a fazer lista.get(0), lista.get(1), lista.get(2)
-
+    const [type] = types //destructing, equivalente a fazer lista.get(0), lista.get(1), lista.get(2)
+    
     pokemon.types = types
     pokemon.type = type
 
@@ -25,7 +25,7 @@ pokeApi.getPokemonDetail = async (pokemon)=>{
 }
 
 //Consumo da API
-pokeApi.getPokemons = async (offset = 0, limit = 10)=>{
+pokeApi.getPokemons = async (offset = 0, limit = 5)=>{
     try{
         const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
         const response = await fetch(url);
