@@ -6,7 +6,7 @@ const teste = document.getElementById('teste')
 
 //Criando uma instância do classe Pokemon 
 function createPokemonCustomDescription(pokeApiDetails){
-    const pokemon = new Pokemon(pokeApiDetails);
+    const pokemon = new detailedPokemon(pokeApiDetails);
     return pokemon;
 }
 
@@ -24,7 +24,7 @@ async function getPokemonDetails(){
 
 async function loadPokemonDescription(){
     const pokemon = await getPokemonDetails(); //Arquivo Json com os detalhes do pokemon
-    console.log(pokemon);
+    console.log(pokemon);   
     teste.innerHTML = `
     <h1>${pokemon.name}</h1>
     <ol>
@@ -33,11 +33,12 @@ async function loadPokemonDescription(){
     <ol>
             <li>height: ${pokemon.height} </li>
             <li>weigth:  ${pokemon.weight}</li>
-            <li>abilities: ${pokemon.abilities.join(' - ')}</li>
+            <li>abilities: ${pokemon.abilities.map((ability)=> ability.name).join()}</li>
         </ol>
         <ol>
             Base Stats
-            <p> ${pokemon.stats}</p>
+            ${pokemon.stats.join('<br>')}
+          
         </ol>
         <ol>
             Moves
@@ -45,7 +46,6 @@ async function loadPokemonDescription(){
         </ol> 
     
     `
-
 }
 loadPokemonDescription()
 
