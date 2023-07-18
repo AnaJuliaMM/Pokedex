@@ -47,7 +47,7 @@ async function loadPokemonDescription(){
     
     `
 }
-loadPokemonDescription()
+//loadPokemonDescription()
 
 
 

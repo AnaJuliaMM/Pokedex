@@ -1,12 +1,10 @@
-* {
+*{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-
-body {
+body{
     background-color: #C01F25;
 }
-
 .content {
     width: 95vw;
     padding: 1rem;
