@@ -1,5 +1,5 @@
 # Projeto Pokedex
-Este projeto consiste em uma Pokedex. A atividade foi desenvolvida como desafio de projeto do Bootcamp JavaScript Developer da plataforma DIO com o objetivo de estudar JavaScript aplicado a WEB e o consumo de API. 
+Este projeto consiste em uma Pokedex, cujo intuito é disponibilizar informações sobre os Pokémons da primeira geração através do consumo da pokéAPI. A atividade foi desenvolvida como desafio de projeto do Bootcamp JavaScript Developer da plataforma DIO com o objetivo de estudar JavaScript aplicado a WEB e o consumo de API. 
 
 <a href='https://pokemonspokedex.netlify.app/index.html'>Acesse Aqui</a>
 
@@ -26,6 +26,10 @@ Através do protocolo http, a aplicação realiza requisições do tipo GET à p
 
 
 https://github.com/AnaJuliaMM/Pokedex/assets/123522605/6da9f79c-85ec-4c64-971e-809c4b5b7a26
+
+
+
+https://github.com/AnaJuliaMM/Pokedex/assets/123522605/f70fc25d-5944-4fd6-a190-c4def22971cd
 
 
 
