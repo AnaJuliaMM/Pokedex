@@ -65,7 +65,7 @@ header{
     border-radius: .7rem; 
     filter: brightness(1.06);
     text-align: center;
-    box-shadow: rgba(12, 12, 12, 0.393) 0px 3px 5px 0px;
+    box-shadow: rgba(11, 11, 11, 0.03) 0px 3px 5px 0px;
 }
 header img{
     width: 100px;
