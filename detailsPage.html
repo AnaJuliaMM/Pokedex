@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Normalize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Fontes da Página-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=IBM+Plex+Serif:ital,wght@1,300&family=Kadwa&family=Noto+Rashi+Hebrew:wght@300&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/Assets/CSS/detailedPage.css">
+
 </head>
 <body>
-    <section class="content">
-        <header>
-            <div class="header">
-                <div class="name">
-                    <h1>Bulbasaur</h1>
-                    <ol class="types">
-                        <li class="type">Grass</li>
-                        <li class="type">Poison</li>
-                    </ol>
-                </div>
-                <span class="id">#1</span>
-            </div>
-            <figure class="image"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur"></figure>
+    <section class="content" id="content">
+        <header id="header">
+            
         </header>
         <article class="description">
-            hello
-            
+            <ol class="navegation">
+                <li id="about">About</li>
+                <li id="stats">Base Stats</li>
+                <li id="moves">Moves</li>
+            </ol>
+            <article class="details" id="details">
+                <ul class="detail" id="detail">
+                    <li><span class="label">Species</span><span class="value">Seed</span></li>
+                    <li><span class="label">Height</span><span class="value">10</span></li>
+                    <li><span class="label">Width</span><span class="value">10</span></li>
+                    <li><span class="label">Abilities</span><span class="value">Hello Hi</span></li>
+                </ul>
+            </article>
         </article>
         
     </section>
@@ -31,3 +42,7 @@
 <script src="/Assets/JS/pokemon-model.js"></script>
 <script src="/Assets/JS/generate-detail-page.js"></script>
 </html>
+
+<div>
+    
+</div>

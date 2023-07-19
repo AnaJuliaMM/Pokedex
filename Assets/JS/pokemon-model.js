@@ -18,7 +18,7 @@ class detailedPokemon extends Pokemon{
         this.height = pokeApiDetails.height;
         this.weight = pokeApiDetails.weight;
         this.abilities = pokeApiDetails.abilities.map((ability)=>{return {name: ability.ability.name, isHidden: ability.is_hidden}})
-        this.stats = pokeApiDetails.stats.map((statInformation)=>`${statInformation.stat.name}:  ${statInformation.base_stat}`)
+        this.stats = pokeApiDetails.stats.map((statInformation)=>`${statInformation.stat.name} ${statInformation.base_stat}`)
         this.moves = pokeApiDetails.moves.map((move)=>move.move.name)
     }
 
