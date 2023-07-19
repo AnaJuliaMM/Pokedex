@@ -5,15 +5,15 @@
 body{
     margin: 0;
     padding: 0;
+    
 }
 .content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100vw;
     margin: 0;
-    
+    min-height: 100vh; 
+    padding: 4rem;
 }
 .content h1{
     text-align: center;
@@ -21,14 +21,7 @@ body{
     color: #ffffff;
     text-transform: capitalize ;
 }
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
-}
+
 
 header{
     display: flex;
@@ -36,17 +29,20 @@ header{
     align-items: center;
     padding: 0;
 }
+.btn-voltar{
+    width: 40px;
+}
 .header{
-    display: flex;
+    display: flex;   
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 50vw;
-    gap: 2rem;
+    gap: .2rem;
 }
 .name{
     display: flex;
-    flex-direction: column;
-    gap: .5rem;
+    gap: 4rem;
 
 }
 .id{
@@ -59,7 +55,7 @@ header{
     list-style: none;
     gap: 1rem;
     padding-inline-start: 0;
-    margin-top: 0;
+    margin: 0;
 }
 .types li{
     color: #ffffff;
@@ -69,6 +65,7 @@ header{
     border-radius: .7rem; 
     filter: brightness(1.06);
     text-align: center;
+    box-shadow: rgba(12, 12, 12, 0.393) 0px 3px 5px 0px;
 }
 header img{
     width: 100px;
@@ -77,8 +74,8 @@ header img{
     background-color: #ecebeb;
     border-radius: 1rem;
     padding: .5rem ;
-    width: 100vw;
-    min-height: 100vh;
+    width: 80vw;
+    box-shadow: rgba(12, 12, 12, 0.409) 0px 7px 15px 0px;
 }
 .navegation{
     list-style: none;
@@ -89,7 +86,8 @@ header img{
 }
 .navegation li{
     font-size: 0.7rem;
-    border-bottom: solid rgb(114, 112, 112) 1px;
+   
+    color: rgb(173, 9, 9);
     padding: .2rem;
 }
 .details{
@@ -102,22 +100,29 @@ header img{
     list-style: none;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: .5rem;
-    width: 80vw;
+    width: 100%;
     padding-inline-start: 0;
+    padding: 0 1rem;
+    margin:0;
+    margin-bottom: 1rem;
+    
 }
 .detail li{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .stats{
     display:  flex;
     justify-content: space-between;
-    width: 80vw;
+    width: 50vw;
 }
 .stats .value{
-    width: 15vw;
+    width: 10vw;
 }
 .label{
     font-size: .85rem;
@@ -125,11 +130,13 @@ header img{
 }
 .value{
     font-weight: 500;
-    text-transform: capitalize ;
-    width: 50vw;
+    font-size: .8rem;
+    text-transform: capitalize;
+    max-width: 70%;
 }
 progress{
     height: 0.5rem;
+    min-width: 10vw;
     background-color: #f9f9f9;
 }
 .detail button{
@@ -146,10 +153,11 @@ progress{
 }
 .moves{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     list-style: none;
     padding-inline-start: 0;
     font-weight: 300;
+    width: 70vw;
 }
 .moves li{
     display: flex;
@@ -160,6 +168,7 @@ progress{
     padding: .2rem;
     background-color: #cfcedc;
     border-radius: .5rem;
+    height: 1.5rem;
 }
 
 .normal {
@@ -172,7 +181,7 @@ progress{
     background-color: #6590EE;
 } 
 .grass {
-    background-color: #80de55;
+    background-color: #7ad052;
 } 
 .electric {
     background-color: #F7D02D;
@@ -215,4 +224,29 @@ progress{
 }
 .fairy {
     background-color: #FEAEC7;
+}
+
+
+@media screen and (min-width: 810px) {
+    .content{
+        padding: 2rem;
+    }
+    .description{
+        width: 70vw;
+    }
+    .moves{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 55vw;
+    } 
+    .detail{
+        padding: 2rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .description{
+        width: 60vw;
+    }
+    .detail{
+        padding: 2rem;
+    }
 }

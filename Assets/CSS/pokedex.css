@@ -9,7 +9,7 @@
     background-color: #6590EE;
 } 
 .grass {
-    background-color: #80de55;
+    background-color: #7ad052;
 } 
 .electric {
     background-color: #F7D02D;
@@ -67,7 +67,7 @@ li.pokemon{
     padding: 1.5rem 1rem;     /*Padding: cima  baixo*/
     border-radius: 1rem;
     color: #ffffff;
-    box-shadow: rgb(100 100 111 / 16%) 0px 6px 10px 2px;
+    box-shadow: rgba(81, 81, 82, 0.295) 0px 6px 10px 2px;
     transition: .3s;
 }
 li.pokemon:hover{
@@ -95,7 +95,7 @@ li.pokemon div.detail img{
     background-color: #6C79DB;
     border: none;
     color: #ffffff;
-    box-shadow: rgb(100 100 111 / 35%) 0px 2px 10px 0px;
+    box-shadow: rgba(29, 29, 30, 0.35) 0px 2px 10px 0px;
     width: 8rem;
     height: 2rem;
     transition: .3s;

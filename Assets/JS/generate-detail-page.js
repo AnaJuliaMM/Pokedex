@@ -38,13 +38,13 @@ async function loadPokemonDescription(){
     header.innerHTML = `
     <div class="header">
         <div class="name">
-            <span class="id">${'#' + pokemon.id}</span>
-            <h1>${pokemon.name}</h1>
-            <ol class="types">
-                ${pokemon.types.map((type)=> `<li class=${pokemon.type}>${type}</li>`).join('')}
-            </ol>
+            <a href='./index.html'><img class='btn-voltar' src="https://cdn-icons-png.flaticon.com/512/60/60577.png?w=1480&t=st=1660060924~exp=1660061524~hmac=4fb840c05d58696b4413292703f30e036986b822470648591a4a97f375c5fabb"></img></a>
+            <h1>${pokemon.name}</h1>    
+            <span class="id">${'#' + pokemon.id}</span>  
         </div>
-        </div>
+        <ol class="types">
+            ${pokemon.types.map((type)=> `<li class=${pokemon.type}>${type}</li>`).join('')}
+        </ol>
         <figure class="image"><img src="${pokemon.image}" alt="${pokemon.name}"></figure>
     </div>`
     details.innerHTML = `
@@ -55,12 +55,17 @@ async function loadPokemonDescription(){
     </ul>`
 
     about.addEventListener('click', ()=>{loadAboutDescription(pokemon)})
+    about.style.borderBottom = 'solid rgb(164, 11, 11) 2px'
     stats.addEventListener('click', ()=>{loadStatsDescription(pokemon)})
     moves.addEventListener('click', ()=>{loadMovesDescription(pokemon)})
 }
 loadPokemonDescription()
 
 function loadAboutDescription(pokemon){
+    stats.style.borderBottom = ''
+    moves.style.borderBottom = ''
+    about.style.borderBottom = 'solid rgb(164, 11, 11) 2px'
+
     details.innerHTML = `
     <ul class="detail">
         <li><span class="label">Height</span><span class="value">${pokemon.height}</span></li>
@@ -69,6 +74,10 @@ function loadAboutDescription(pokemon){
     </ul>`
 }
 function loadStatsDescription(pokemon){
+    stats.style.borderBottom = 'solid rgb(164, 11, 11) 2px'
+    moves.style.borderBottom = ''
+    about.style.borderBottom = ''
+    
     details.innerHTML = `
     <ul class="detail">  
         ${pokemon.stats.map((stat)=> {
@@ -83,6 +92,10 @@ function loadStatsDescription(pokemon){
     </ul>`
 }
 function loadMovesDescription(pokemon){
+    stats.style.borderBottom = ''
+    about.style.borderBottom = ''
+    moves.style.borderBottom = 'solid rgb(164, 11, 11) 2px'
+
     const primeirosElementos = pokemon.moves.slice(0, 27)
     details.innerHTML = `
     <ul class="detail">
@@ -92,15 +105,14 @@ function loadMovesDescription(pokemon){
             <button id="showAllMoves">show all</button>
         </li>
     </ul>
-    <ul class="moves" id="movesName">
-    
-    </ul>
+    <ul class="moves" id="movesName"> </ul>
     `
     const showAllMoves = document.getElementById('showAllMoves');
     const movesName = document.getElementById('movesName')
+    
 
     showAllMoves.addEventListener('click', ()=>{
-        if(movesName.innerHTML != ''){
+        if(movesName.innerText != ''){
             movesName.innerHTML = ''
             showAllMoves.innerText = 'show all'
         }else{
