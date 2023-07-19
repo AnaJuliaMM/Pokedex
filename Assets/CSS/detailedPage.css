@@ -168,7 +168,7 @@ progress{
     padding: .2rem;
     background-color: #cfcedc;
     border-radius: .5rem;
-    height: 1.5rem;
+    min-height: 1.5rem;
 }
 
 .normal {
