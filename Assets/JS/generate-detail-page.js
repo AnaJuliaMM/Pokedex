@@ -1,7 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search); //Procura Query strings
 const pokemonId = urlParams.get('pokemonId'); //Procura a chave 'pokemonId' 
-console.log(pokemonId); // Exibe o nome do Pokémon no console
-
 const header = document.getElementById('header')
 const content = document.getElementById('content')
 const about = document.getElementById('about')
@@ -9,7 +7,6 @@ const stats = document.getElementById('stats')
 const moves = document.getElementById('moves')
 const details = document.getElementById('details');
 const detail = document.getElementById('detail');
-
 
 
 
