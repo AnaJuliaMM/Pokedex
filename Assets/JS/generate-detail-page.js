@@ -33,7 +33,6 @@ async function getPokemonDetails(){
 
 async function loadPokemonDescription(){
     const pokemon = await getPokemonDetails(); //Arquivo Json com os detalhes do pokemon
-    console.log(pokemon);  
     content.classList.add(`${pokemon.type}`) 
     header.innerHTML = `
     <div class="header">
@@ -73,6 +72,7 @@ function loadAboutDescription(pokemon){
         <li><span class="label">Abilities</span><span class="value">${pokemon.abilities.map((ability)=> ability.name).join(', ')}</span></li>
     </ul>`
 }
+
 function loadStatsDescription(pokemon){
     stats.style.borderBottom = 'solid rgb(164, 11, 11) 2px'
     moves.style.borderBottom = ''
@@ -91,6 +91,7 @@ function loadStatsDescription(pokemon){
             </li>`}).join('')}
     </ul>`
 }
+
 function loadMovesDescription(pokemon){
     stats.style.borderBottom = ''
     about.style.borderBottom = ''
@@ -126,25 +127,3 @@ function loadMovesDescription(pokemon){
 
 
 
-/*
-
-<h1>${pokemon.name}</h1>
-    <ol>
-        ${pokemon.types.map((type)=> `<li>${type}</li>`).join('')}
-    </ol>
-    <ol>
-            <li>height: ${pokemon.height} </li>
-            <li>weigth:  ${pokemon.weight}</li>
-            <li>abilities: ${pokemon.abilities.map((ability)=> ability.name).join()}</li>
-        </ol>
-        <ol>
-            Base Stats
-            ${pokemon.stats.join('<br>')}
-          
-        </ol>
-        <ol>
-            Moves
-            ${pokemon.moves.map((move)=>`<li>${move}</li>`).join('')}
-        </ol> 
-
-*/
