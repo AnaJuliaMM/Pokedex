@@ -234,6 +234,10 @@ progress{
     .description{
         width: 70vw;
     }
+    .label, 
+    .value{
+        font-size: 1rem;
+    }
     .moves{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         width: 55vw;

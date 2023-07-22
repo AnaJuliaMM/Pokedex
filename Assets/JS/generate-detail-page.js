@@ -110,12 +110,13 @@ function loadMovesDescription(pokemon){
     
 
     showAllMoves.addEventListener('click', ()=>{
-        if(movesName.innerText != ''){
-            movesName.innerHTML = ''
-            showAllMoves.innerText = 'show all'
-        }else{
+        console.log();
+        if(!movesName.innerText){
             movesName.innerHTML = `${pokemon.moves.map((move)=>`<li>${move}</li>`).join('')}`
             showAllMoves.innerText = 'Hide all'
+        }else{
+            movesName.innerHTML = ''
+            showAllMoves.innerText = 'show all'
         }
         
     })
