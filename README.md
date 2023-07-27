@@ -1,4 +1,8 @@
 # Projeto Pokedex
+*(en)*
+This project is a Pokedex, that allows the user consume information about the Pokemons from the  first generation. It is a challenge from the Bootcamp JavaScript Developer (Digital Innovation One) designated to work with JavaScript consume of API, so that this project consumes data from the pokéAPi.
+
+*(Pt-br)*
 Este projeto consiste em uma Pokedex, cujo intuito é disponibilizar informações sobre os Pokémons da primeira geração através do consumo da pokéAPI. A atividade foi desenvolvida como desafio de projeto do Bootcamp JavaScript Developer da plataforma DIO com o objetivo de estudar JavaScript aplicado a WEB e o consumo de API. 
 
 <a href='https://pokemonspokedex.netlify.app/index.html'>Acesse Aqui</a>
