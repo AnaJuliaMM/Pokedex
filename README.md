@@ -5,7 +5,7 @@ This project is a Pokedex, that allows the user consume information about the Po
 *(Pt-br)*
 Este projeto consiste em uma Pokedex, cujo intuito é disponibilizar informações sobre os Pokémons da primeira geração através do consumo da pokéAPI. A atividade foi desenvolvida como desafio de projeto do Bootcamp JavaScript Developer da plataforma DIO com o objetivo de estudar JavaScript aplicado a WEB e o consumo de API. 
 
-<a href='https://pokemonspokedex.netlify.app/index.html'>Acesse Aqui</a>
+<a href='https://pokemonspokedex.netlify.app/index.html'>Acesse a Pokedex Aqui</a>
 
 ## ⁉️ O que é um Pokedex? 
 O Pokédex é um dispositivo eletrônico fictício no mundo dos Pokémon. É uma enciclopédia digital usada pelos treinadores Pokémon para registrar informações sobre as espécies de Pokémon que eles encontram, assim, ele fornece detalhes sobre os atributos, habilidades, movimentos, evoluções, habitats e outras características dos Pokémon.
